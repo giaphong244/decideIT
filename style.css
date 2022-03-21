@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width:100%;
+    height:100rem;
+    background-color: #171515;
+    height:100%;
+    display: grid;
+    grid-template-rows: 10em 3em auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "nav"
+    "category"
+    "content";
+}
+body #logo img{
+    
+    margin:0;
+    width:15em;
+
+
+    cursor:pointer;
+}
+/* .header{
+    position: relative;
+
+    top:1em;
+    left:0;
+} */
+
+.nav{
+    position: relative;
+    top:1em;
+    left:0;
+    display: grid;
+    grid-template-columns: 30em auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'logo choice';
+    align-items: center;
+}
+
+#logo{
+    grid-area:logo;
+    position:relative;
+    top:0;
+    left:10em;
+}
+.header .choice{
+    grid-area: choice;
+    width:90%;
+}
+.header .choice ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.choice ul li a{
+    text-decoration: none;
+    color:#fff;
+    position: relative;
+
+}
+.choice ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.choice ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    top: 1.5em;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.category{
+    grid-area:category ;
+    display: flex;
+    
+}
+.category .select select{
+    width:15em;
+    height:3em;
+    
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    margin-left: 10em;
+    
+    border-radius: 2em;
+    appearance:none;
+    background-position: right 5px top;
+    
+}
+.search input[type='text']{
+    color:#fff;
+    background-color: #171515;
+    border-color:#fff;
+    padding:1em;
+    margin-left:15em;
+    width: 50em;
+    border-radius:2em;
+}
+.search button[type='submit']{
+    cursor:pointer;
+    background-color: #171515;
+    color:#fff;
+    border:none;
+    font-size:1.5em;
+}
+.compability{
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: "taurus matching pisces";
+}
+.taurus{
+    grid-area: taurus;
+    
+}
+.pisces{
+    grid-area: pisces;
+}
+.matching{
+    grid-area: matching;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+#progressbar {
+    background-color: black;
+    border-radius: 2em;
+    border-color: #fff;
+  /* (height of inner div) / 2 + padding */
+    padding: .3em;
+    width:100%;
+}
+
+#progressbar>div {
+    background-color: #ebebfc;
+    width: 67%;
+    text-align: center;
+    vertical-align: middle;
+    /* Adjust with JavaScript */
+    height: 2em;
+    border-radius: 2em;
+    text-align: center;
+}
+.sign{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.signImage img{
+    width:15em;
+    filter: opacity(0.5) drop-shadow(0 0 0 #ebebfc);;
+}
+
+.information input[type='text']{
+    color:#fff;
+    background-color: #171515;
+    border-color:#fff;
+    padding:.75em;
+    text-align: center;
+    width: 20em;
+    border-radius:2em;
+    font-size: 1.2em;
+}
+.information select{
+    width:15em;
+    height:3em;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: #171515;
+    border-color: #fff;
+    color:#fff;
+    border-radius: 2em;
+    margin-top:1em;
+}
+
+.detail{
+    display :grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "planet factors love";
+
+}
+.p1{
+    margin-top:3em;
+    width:80%;
+    
+    text-align: center;
+    color:#fff;
+}
+.planet{
+    grid-area: planet;
+    
+}
+.factors{
+    grid-area: factors;
+}
+.love{
+    grid-area:love;
+}
